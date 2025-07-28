@@ -208,5 +208,34 @@ document.addEventListener('DOMContentLoaded', function () {
    moveForm();
    window.addEventListener('resize', moveForm);
 });
+
+/*------------------------------
+Tabs podbor
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const tabsContainer = document.querySelector('.selection__tabs');
+   const groupsContainer = document.querySelector('.selection__groups');
+
+   if (!tabsContainer || !groupsContainer) return;
+
+   const tabs = tabsContainer.querySelectorAll('.selection__tab');
+   const groups = groupsContainer.querySelectorAll('.selection__group');
+
+   if (!tabs.length || !groups.length) return;
+
+   tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+         const tabId = tab.dataset.tab;
+
+         tabs.forEach(t => t.classList.remove('active'));
+         groups.forEach(g => g.classList.remove('active'));
+
+         tab.classList.add('active');
+         const activeGroup = groupsContainer.querySelector(`.selection__group[data-group="${tabId}"]`);
+         if (activeGroup) activeGroup.classList.add('active');
+      });
+   });
+});
+
 /******/ })()
 ;
