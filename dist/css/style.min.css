@@ -910,15 +910,7 @@ Related block
 /*------------------------------
 Documents
 ---------------------------*/
-.documentation {
-  margin-bottom: 90px;
-}
-@media (width < 767px) {
-  .documentation {
-    margin-bottom: 80px;
-  }
-}
-.documentation__title {
+.fv-title {
   font-size: 70px;
   font-weight: 600;
   margin-bottom: 40px;
@@ -926,18 +918,27 @@ Documents
   letter-spacing: -0.03em;
 }
 @media (width < 1500px) {
-  .documentation__title {
+  .fv-title {
     font-size: 80px;
   }
 }
 @media (width < 980px) {
-  .documentation__title {
+  .fv-title {
     font-size: 64px;
   }
 }
 @media (width < 767px) {
-  .documentation__title {
+  .fv-title {
     font-size: 44px;
+  }
+}
+
+.documentation {
+  margin-bottom: 90px;
+}
+@media (width < 767px) {
+  .documentation {
+    margin-bottom: 80px;
   }
 }
 .documentation__body {
@@ -1288,24 +1289,10 @@ Documents
 
 /*------------------------------Career---------------------------*/
 .fv-career__title {
-  font-size: 96px;
   margin-bottom: 40px;
-  line-height: 100%;
-  text-transform: uppercase;
-}
-@media (width < 1500px) {
-  .fv-career__title {
-    font-size: 80px;
-  }
-}
-@media (width < 980px) {
-  .fv-career__title {
-    font-size: 64px;
-  }
 }
 @media (width < 767px) {
   .fv-career__title {
-    font-size: 40px;
     margin-bottom: 20px;
   }
 }
@@ -2018,10 +2005,7 @@ Documents
 }
 
 .selection__title {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 96px;
+  margin-bottom: 30px;
 }
 .selection__tabs {
   display: flex;
