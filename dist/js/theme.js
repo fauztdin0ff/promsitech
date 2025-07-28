@@ -52,3 +52,23 @@ if (btnUp && footer) {
    });
    checkOffset();
 }
+
+
+
+const contactsSlider = new Swiper('.contacts-swiper', {
+   slidesPerView: 1.2,
+   spaceBetween: 10,
+   initialSlide: 1,
+   loop: false,
+   centeredSlides: true,
+   navigation: {
+      nextEl: '.slider__next',
+      prevEl: '.slider__prev'
+   },
+   breakpoints: {
+      1024: {
+         slidesPerView: 2,
+         spaceBetween: 30
+      }
+   }
+});

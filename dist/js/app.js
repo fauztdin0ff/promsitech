@@ -121,5 +121,92 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/*------------------------------
+Team gallery
+---------------------------*/
+const teamSlider = document.querySelector(".fv-team__slider");
+
+if (teamSlider) {
+   const teamSwiper = new Swiper(teamSlider, {
+      slidesPerView: 1.2,
+      centeredSlides: true,
+      spaceBetween: 30,
+      initialSlide: 1,
+      loop: false,
+      navigation: {
+         nextEl: '.fv-team__slider-next',
+         prevEl: '.fv-team__slider-prev',
+      },
+      breakpoints: {
+         320: {
+            spaceBetween: 10
+
+         },
+         768: {
+            spaceBetween: 10
+         },
+         1024: {
+            spaceBetween: 30
+         }
+      }
+   });
+
+   Fancybox.bind('[data-fancybox="team-gallery"]', {
+      Thumbs: true,
+      Toolbar: {
+         display: [
+            "zoom",
+            "close"
+         ]
+      }
+   });
+};
+
+
+/*------------------------------
+Upload file
+---------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   const fileInput = document.querySelector('.upload-file input[type="file"]');
+   const fileContainer = document.querySelector('.upload-file-container');
+
+   if (fileInput && fileContainer) {
+      fileInput.addEventListener('change', function () {
+         const file = fileInput.files[0];
+         if (file) {
+            fileContainer.textContent = file.name;
+         } else {
+            fileContainer.textContent = '';
+         }
+      });
+   }
+});
+
+
+/*------------------------------
+Move nav in article
+---------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   const sendForm = document.querySelector('.send-resume__card');
+   const sendFormBody = document.querySelector('.send-resume__body');
+   const mobileContainer = document.querySelector('.send-resume-mob');
+
+   function moveForm() {
+      if (!sendForm || !sendFormBody || !mobileContainer) return;
+
+      if (window.innerWidth <= 1023) {
+         if (!mobileContainer.contains(sendForm)) {
+            mobileContainer.appendChild(sendForm);
+         }
+      } else {
+         if (!sendFormBody.contains(sendForm)) {
+            sendFormBody.appendChild(sendForm);
+         }
+      }
+   }
+
+   moveForm();
+   window.addEventListener('resize', moveForm);
+});
 /******/ })()
 ;
