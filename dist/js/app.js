@@ -98,6 +98,8 @@ Accordion
 document.addEventListener('DOMContentLoaded', function () {
    const accordion = document.querySelector('.documentation__content');
 
+   if (!accordion) return;
+
    accordion.addEventListener('click', function (e) {
       const btn = e.target.closest('.accordion__button');
       if (!btn) return;
@@ -108,17 +110,16 @@ document.addEventListener('DOMContentLoaded', function () {
       const parent = currentItem.parentElement;
       const isActive = currentItem.classList.contains('active');
 
-      // Закрыть всех "братьев" текущего элемента
       Array.from(parent.children).forEach(item => {
          if (item !== currentItem && item.classList.contains('accordion__item')) {
             item.classList.remove('active');
          }
       });
 
-      // Переключить текущий
       currentItem.classList.toggle('active', !isActive);
    });
 });
+
 
 /******/ })()
 ;
