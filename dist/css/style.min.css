@@ -471,7 +471,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  top: 4px;
+  top: 3px;
 }
 .fv-article__menu ul li:not(:last-child) {
   margin-bottom: 15px;
@@ -562,17 +562,22 @@ body {
   }
 }
 .fv-article__banner-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  z-index: 3;
+  display: none;
+}
+@media (width < 767px) {
+  .fv-article__banner-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 3;
+  }
 }
 .fv-article__banner-image {
   width: 100%;
@@ -603,11 +608,15 @@ body {
   }
 }
 .fv-article__banner-text {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   z-index: 3;
-  padding: 20px;
+}
+@media (width < 767px) {
+  .fv-article__banner-text {
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+  }
 }
 .fv-article__banner-name {
   font-weight: 700;
@@ -1118,6 +1127,7 @@ Documents
 .accordion__item .accordion__content .accordion__button .accordion__button-icon {
   width: 22px;
   height: 22px;
+  flex: 0 0 22px;
 }
 .accordion__item .accordion__content .accordion__button .accordion__button-icon img {
   width: 13px;
