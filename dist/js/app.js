@@ -242,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
 Product preview sliders
 ---------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
+   // Главный слайдер
    const mainSliderEl = document.querySelector(".selection__results-slider");
 
    if (mainSliderEl) {
@@ -274,35 +275,49 @@ document.addEventListener("DOMContentLoaded", function () {
       });
    }
 
-   // images slider
-   document.querySelectorAll('.product-preview__images').forEach(function (slider) {
-      const swiperInstance = new Swiper(slider, {
-         loop: true,
-         nested: true,
-         pagination: {
-            el: slider.querySelector('.product-preview__images-pagination'),
-            clickable: true,
-            type: 'bullets',
-            bulletClass: 'swiper-pagination-bullet',
-            bulletActiveClass: 'swiper-pagination-bullet-active',
-            renderBullet: function (index, className) {
-               return `<span class="${className}"></span>`;
-            },
-         },
-      });
-      let lastMouseX = null;
-      slider.addEventListener('mousemove', function (event) {
-         if (lastMouseX !== null) {
-            event.clientX > lastMouseX ? swiperInstance.slideNext() : swiperInstance.slidePrev();
-         }
-         lastMouseX = event.clientX;
-      });
-      slider.addEventListener('mouseleave', function () {
-         lastMouseX = null;
-      });
-   });
+   // Внутренние слайдеры
+   const innerSliders = document.querySelectorAll('.product-preview__images');
 
+   if (innerSliders.length) {
+      innerSliders.forEach((slider, index) => {
+         const paginationEl = slider.querySelector('.product-preview__images-pagination');
+         if (!paginationEl) return;
+
+         const swiperInstance = new Swiper(slider, {
+            loop: true,
+            nested: true,
+            pagination: {
+               el: paginationEl,
+               clickable: true,
+               type: 'bullets',
+               bulletClass: 'swiper-pagination-bullet',
+               bulletActiveClass: 'swiper-pagination-bullet-active',
+               renderBullet: function (index, className) {
+                  return `<span class="${className}"></span>`;
+               },
+            },
+         });
+
+         let lastMouseX = null;
+
+         slider.addEventListener('mousemove', function (event) {
+            if (window.innerWidth <= 1024) return;
+
+            if (lastMouseX !== null) {
+               event.clientX > lastMouseX
+                  ? swiperInstance.slideNext()
+                  : swiperInstance.slidePrev();
+            }
+            lastMouseX = event.clientX;
+         });
+
+         slider.addEventListener('mouseleave', function () {
+            lastMouseX = null;
+         });
+      });
+   }
 });
+
 
 /******/ })()
 ;
