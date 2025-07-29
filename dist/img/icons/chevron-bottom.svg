@@ -1,0 +1,10 @@
+<svg class="custom-select__value-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5077_2857)">
+            <path d="M6.175 7.15625L10 10.9729L13.825 7.15625L15 8.33125L10 13.3312L5 8.33125L6.175 7.15625Z" fill="#004290"></path>
+            </g>
+            <defs>
+            <clipPath id="clip0_5077_2857">
+                <rect width="20" height="20" fill="white" transform="matrix(0 1 -1 0 20 0)"></rect>
+            </clipPath>
+            </defs>
+        </svg>

@@ -319,5 +319,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/*------------------------------
+More products slider
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const sliders = document.querySelectorAll(".more-products__slider");
+
+   sliders.forEach((slider, index) => {
+      const container = slider.closest(".more-products");
+
+      if (!container) return;
+
+      const nextBtn = container.querySelector(".more-products__next");
+      const prevBtn = container.querySelector(".more-products__prev");
+
+      new Swiper(slider, {
+         slidesPerView: 4,
+         spaceBetween: 30,
+         loop: false,
+         navigation: {
+            nextEl: nextBtn,
+            prevEl: prevBtn
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 1.5,
+               spaceBetween: 10,
+            },
+            600: {
+               slidesPerView: 2,
+            },
+            1024: {
+               slidesPerView: 3,
+            },
+            1300: {
+               slidesPerView: 4,
+            }
+         }
+      });
+   });
+});
+
 /******/ })()
 ;
