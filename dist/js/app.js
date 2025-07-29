@@ -360,5 +360,20 @@ document.addEventListener("DOMContentLoaded", function () {
    });
 });
 
+/*------------------------------
+Open filters 
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const toggleBtn = document.querySelector(".fv-wishlist__sidebar-toggle");
+   const sidebar = document.querySelector(".fv-wishlist__filters");
+
+   if (toggleBtn && sidebar) {
+      toggleBtn.addEventListener("click", function () {
+         toggleBtn.classList.toggle("active");
+         sidebar.classList.toggle("opened");
+      });
+   }
+});
+
 /******/ })()
 ;
