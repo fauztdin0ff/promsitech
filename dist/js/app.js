@@ -237,5 +237,72 @@ document.addEventListener("DOMContentLoaded", function () {
    });
 });
 
+
+/*------------------------------
+Product preview sliders
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const mainSliderEl = document.querySelector(".selection__results-slider");
+
+   if (mainSliderEl) {
+      const mainSlider = new Swiper(mainSliderEl, {
+         slidesPerView: 4,
+         spaceBetween: 30,
+         loop: false,
+         navigation: {
+            nextEl: '.selection__results-slider-next',
+            prevEl: '.selection__results-slider-prev'
+         },
+         pagination: {
+            el: '.selection__results-pagination',
+            clickable: true,
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+            },
+            600: {
+               slidesPerView: 2,
+            },
+            1024: {
+               slidesPerView: 3,
+            },
+            1300: {
+               slidesPerView: 4,
+            }
+         }
+      });
+   }
+
+   // images slider
+   document.querySelectorAll('.product-preview__images').forEach(function (slider) {
+      const swiperInstance = new Swiper(slider, {
+         loop: true,
+         nested: true,
+         pagination: {
+            el: slider.querySelector('.product-preview__images-pagination'),
+            clickable: true,
+            type: 'bullets',
+            bulletClass: 'swiper-pagination-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active',
+            renderBullet: function (index, className) {
+               return `<span class="${className}"></span>`;
+            },
+         },
+      });
+      let lastMouseX = null;
+      slider.addEventListener('mousemove', function (event) {
+         if (lastMouseX !== null) {
+            event.clientX > lastMouseX ? swiperInstance.slideNext() : swiperInstance.slidePrev();
+         }
+         lastMouseX = event.clientX;
+      });
+      slider.addEventListener('mouseleave', function () {
+         lastMouseX = null;
+      });
+   });
+
+});
+
 /******/ })()
 ;
