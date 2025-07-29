@@ -2667,3 +2667,37 @@ Documents
     font-size: 14px;
   }
 }
+
+.fv-error__message {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 600;
+}
+@media (width < 767px) {
+  .fv-error__message {
+    font-size: 16px;
+  }
+}
+.fv-error__buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.fv-error__buttons .button {
+  font-size: 18px;
+}
+@media (width < 767px) {
+  .fv-error__buttons {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .fv-error__buttons .button,
+  .fv-error__buttons .button-blue {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    height: 48px;
+  }
+}
