@@ -375,5 +375,82 @@ document.addEventListener("DOMContentLoaded", function () {
    }
 });
 
+
+/*------------------------------
+partnership slider
+---------------------------*/
+document.querySelectorAll(".partnership__slider").forEach((slider) => {
+   const container = slider.closest(".partnership");
+   const nextBtn = container.querySelector(".partnership__slider-next");
+   const prevBtn = container.querySelector(".partnership__slider-prev");
+
+   if (nextBtn && prevBtn) {
+      new Swiper(slider, {
+         slidesPerView: 'auto',
+         spaceBetween: 20,
+         loop: true,
+         navigation: {
+            nextEl: nextBtn,
+            prevEl: prevBtn,
+         },
+         breakpoints: {
+            320: {
+               spaceBetween: 10,
+            },
+            768: {
+               spaceBetween: 20,
+            },
+         }
+      });
+   }
+
+   const fancyItems = container.querySelectorAll('[data-fancybox]');
+   if (fancyItems.length > 0) {
+      Fancybox.bind(fancyItems, {
+         Thumbs: {
+            autoStart: false,
+         },
+         Toolbar: {
+            display: ['zoom', 'close'],
+         },
+      });
+   }
+});
+
+
+/*------------------------------
+Popups
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const openButtons = document.querySelectorAll('.open-popup');
+
+   if (openButtons.length > 0) {
+      openButtons.forEach(button => {
+         button.addEventListener('click', function () {
+            const popupId = this.dataset.popup;
+            const popup = document.getElementById(popupId);
+
+            if (popup) {
+               popup.classList.add('show');
+               document.body.style.overflow = 'hidden';
+            }
+         });
+      });
+   }
+
+   document.addEventListener('click', function (e) {
+      const openPopup = document.querySelector('.fv-popup.show');
+
+      if (openPopup) {
+         const isCloseBtn = e.target.closest('.fv-popup__close');
+         const isInsideBody = e.target.closest('.fv-popup__body');
+
+         if (isCloseBtn || (!isInsideBody && e.target.closest('.fv-popup'))) {
+            openPopup.classList.remove('show');
+            document.body.style.overflow = '';
+         }
+      }
+   });
+});
 /******/ })()
 ;
