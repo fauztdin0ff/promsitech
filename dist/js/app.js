@@ -107,16 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const currentItem = btn.closest('.accordion__item');
       if (!currentItem) return;
 
-      const parent = currentItem.parentElement;
-      const isActive = currentItem.classList.contains('active');
-
-      Array.from(parent.children).forEach(item => {
-         if (item !== currentItem && item.classList.contains('accordion__item')) {
-            item.classList.remove('active');
-         }
-      });
-
-      currentItem.classList.toggle('active', !isActive);
+      currentItem.classList.toggle('active');
    });
 });
 
@@ -159,14 +150,19 @@ document.querySelectorAll(".fv-team__slider").forEach((slider) => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+   const galleryItems = document.querySelectorAll('[data-fancybox="team-gallery"]');
 
-Fancybox.bind('[data-fancybox="team-gallery"]', {
-   Thumbs: true,
-   Toolbar: {
-      display: [
-         "zoom",
-         "close"
-      ]
+   if (galleryItems.length > 0) {
+      Fancybox.bind('[data-fancybox="team-gallery"]', {
+         Thumbs: true,
+         Toolbar: {
+            display: [
+               "zoom",
+               "close"
+            ]
+         }
+      });
    }
 });
 

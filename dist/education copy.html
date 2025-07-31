@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="description" content="">
+   <meta property="og:title" content="">
+   <meta property="og:description" content="">
+   <meta property="og:url" content="">
+   <meta property="og:type" content="website">
+   <!-- Styles -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
+   <link rel="stylesheet" href="css/air-datepicker.min.css">
+   <link rel="stylesheet" href="css/theme.css">
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Главная</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="header__top hidden-xs--small hidden-xs">
+   <div class="wrapper">
+      <div class="header__menu">
+         <ul class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="/about/">О компании</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/partners/">Партнерам</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/contacts/">Контакты</a></li>
+         </ul>
+      </div>
+      <div class="header__contacts">
+         <a class="header__email" href="mailto:info@prst.ru">
+            info@prst.ru </a>
+         <a class="header__phone" href="tel:88006003426">
+            8 800 600 34 26 </a>
+      </div>
+   </div>
+</div>
+<div class="header__wrapper">
+   <div class="header__bottom">
+      <div class="wrapper">
+         <a class="header__logo" href="/">
+            <img src="img/logo.png" alt="Промсистех">
+         </a>
+         <div class="header__main">
+            <div class="header__catalog-button hidden-xs--small hidden-xs">
+               <button class="button button--catalog" type="button">
+                  <span class="button__icon">
+                     <i class="icon icon--menu"></i>
+                  </span>
+                  <span>
+                     Каталог </span>
+               </button>
+            </div>
+            <div class="header__search">
+               <form class="search-form" action="#">
+                  <div class="search-form__input-wrapper">
+                     <input class="search-form__input" placeholder="Введите слово для поиска">
+                  </div>
+                  <button class="search-form__button" type="submit">
+                     <i class="icon icon--search"></i>
+                  </button>
+                  <a class="search-form__button search-form__button_toggle" href="#">
+                     <i class="icon icon--search-icon"></i>
+                  </a>
+               </form>
+            </div>
+            <div class="header__extra-menu">
+               <ul class="header__extra-menu-list">
+                  <li class="header__extra-menu-item header__extra-menu-item--hidden ">
+                     <a class="header__extra-menu-link" href="/about/">О компании</a>
+                  </li>
+                  <li class="header__extra-menu-item header__extra-menu-item--hidden ">
+                     <a class="header__extra-menu-link" href="/partners/">Партнерам</a>
+                  </li>
+                  <li class="header__extra-menu-item header__extra-menu-item--hidden ">
+                     <a class="header__extra-menu-link" href="/contacts/">Контакты</a>
+                  </li>
+                  <li class="header__extra-menu-item  ">
+                     <a class="header__extra-menu-link" href="/solutions/">Решения</a>
+                  </li>
+                  <li class="header__extra-menu-item  ">
+                     <a class="header__extra-menu-link" href="/wherebuy/">Где купить</a>
+                  </li>
+                  <li class="header__extra-menu-item  header__extra-menu-item--has-sub">
+                     <a class="header__extra-menu-link" href="#">Поддержка<i class="icon icon--arrow-down"></i></a>
+                     <ul class="header__submenu">
+                        <li><a href="#">Гарантия и сервис</a></li>
+                        <li><a href="#">Политика качества</a></li>
+                        <li><a href="#">Подбор продукта</a></li>
+                        <li><a href="#">Документация</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <div class="header__main-right">
+               <div class="header__actions hidden-xs--small hidden-xs">
+                  <button class="button button--callback popup-open" type="button" data-mfp-src="#call-popup">
+                     <span>
+                        Обратный звонок </span>
+                     <i class="icon icon--call"></i>
+                  </button>
+               </div>
+               <div class="header__contacts">
+                  <span class="header__phone">
+                     8 800 600 34 26 </span>
+               </div>
+               <div class="header__actions">
+                  <a class="header__action-link hidden-xs--small hidden-xs" href="#">
+                     <i class="icon icon--user"></i>
+                  </a>
+                  <a class="header__action-link hidden-xs--small hidden-xs" href="#">
+                     <i class="icon icon--favorite"></i>
+                  </a>
+                  <div class="header__cart">
+                     <a class="header__cart-link" href="/cart/">
+                        <i class="icon icon--cart"></i>
+                        <span class="header__cart-count">1</span>
+                     </a>
+                  </div>
+               </div>
+               <button class="hamburger hidden-xl">
+                  <input class="hamburger__input" type="checkbox">
+                  <div class="hamburger__line"></div>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <nav class="catalog-megamenu" id="catalog-megamenu">
+      <div class="catalog-megamenu__inner">
+         <div class="catalog-megamenu__column">
+            <h3 class="catalog-megamenu__title">Приводы</h3>
+            <ul class="catalog-megamenu__list">
+               <li>
+                  <a href="/catalog/privody/preobrazovateli-chastoty-innovert/">
+                     <i class="icon"></i>Преобразователи
+                     частоты INNOVERT </a>
+               </li>
+               <li>
+                  <a href="/catalog/privody/reduktory-innovari-innored/">
+                     <i class="icon"></i>Редукторы
+                     INNOVARI, INNORED </a>
+               </li>
+               <li>
+                  <a href="/catalog/privody/elektrodvigateli-innovari-innored/">
+                     <i class="icon"></i>Электродвигатели
+                     INNOVARI, INNORED </a>
+               </li>
+               <li>
+                  <a href="/catalog/privody/motor-reduktory-innovari-innored/">
+                     <i class="icon"></i>Мотор-редукторы
+                     INNOVARI, INNORED </a>
+               </li>
+            </ul>
+         </div>
+         <div class="catalog-megamenu__column">
+            <h3 class="catalog-megamenu__title">Датчики</h3>
+            <ul class="catalog-megamenu__list">
+               <li>
+                  <a href="/catalog/datchiki/datchiki-urovnya-sypuchikh-produktov-innolevel/">
+                     <i class="icon"></i>Датчики
+                     уровня сыпучих продуктов INNOLEVEL </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-urovnya-zhidkikh-sred-innolevel/">
+                     <i class="icon"></i>Датчики
+                     уровня жидких сред INNOLEVEL </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-konveyernoy-bezopasnosti-innolevel/">
+                     <i class="icon"></i>Датчики
+                     конвейерной безопасности INNOLEVEL </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-pyli-innolevel/">
+                     <i class="icon"></i>Датчики
+                     пыли INNOLEVEL </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-ugla-povorota-enkodery-innocont/">
+                     <i class="icon"></i>Датчики
+                     угла поворота (энкодеры) INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/beskontaktnye-datchiki-innocont/">
+                     <i class="icon"></i>Бесконтактные
+                     датчики INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-davleniya-innocont/">
+                     <i class="icon"></i>Датчики
+                     давления INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-temperatury-innocont-/">
+                     <i class="icon"></i>Датчики
+                     температуры INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-urovnya-baumer-/">
+                     <i class="icon"></i>Датчики
+                     уровня Baumer </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-kontsentratsii-baumer-/">
+                     <i class="icon"></i>Датчики
+                     концентрации Baumer </a>
+               </li>
+               <li>
+                  <a href="/catalog/datchiki/datchiki-potoka-baumer-/">
+                     <i class="icon"></i>Датчики
+                     потока Baumer </a>
+               </li>
+            </ul>
+         </div>
+         <div class="catalog-megamenu__column">
+            <h3 class="catalog-megamenu__title">Автоматика</h3>
+            <ul class="catalog-megamenu__list">
+               <li>
+                  <a href="/catalog/avtomatika/svetosignalnye-kolonny-innocont/">
+                     <i class="icon"></i>Светосигнальные
+                     колонны INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/avtomatika/termokontrollery-innocont/">
+                     <i class="icon"></i>Термоконтроллеры
+                     INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/avtomatika/istochniki-pitaniya-innocont/">
+                     <i class="icon"></i>Источники
+                     питания INNOCONT </a>
+               </li>
+               <li>
+                  <a href="/catalog/avtomatika/prochaya-avtomatika/">
+                     <i class="icon"></i>Прочая
+                     автоматика </a>
+               </li>
+               <li>
+                  <a href="/catalog/avtomatika/avtomatika-baumer/">
+                     <i class="icon"></i>Автоматика
+                     Baumer </a>
+               </li>
+               <li>
+                  <a href="/catalog/avtomatika/avtomatika-autonics/">
+                     <i class="icon"></i>Автоматика
+                     Autonics </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+</div>
+<nav class="mobile-menu">
+   <div class="mobile-menu__search">
+      <form class="search-form" action="#">
+         <input class="search-form__input" placeholder="Введите слово для поиска">
+         <button class="search-form__button" type="submit"><i class="icon icon--search"></i></button>
+      </form>
+   </div>
+   <div class="mobile-menu__catalog">
+      <button class="button button--catalog js-mobile-menu-toggle-catalog" type="button">
+         <i class="icon icon--menu"></i>
+         <i class="icon icon--menu-close"></i>
+         <span>Каталог</span>
+      </button>
+      <div class="mobile-menu__catalog-dropdown">
+         <div class="mobile-menu__catalog-block">
+            <div class="mobile-menu__catalog-block-title js-mobile-menu-toggle-catalog-block">Приводы<i
+                  class="icon icon--arrow-down"></i></div>
+            <div class="mobile-menu__catalog-block-dropdown">
+               <a href="/catalog/privody/preobrazovateli-chastoty-innovert/">
+                  <i class="icon"></i>Преобразователи
+                  частоты INNOVERT </a>
+               <a href="/catalog/privody/reduktory-innovari-innored/">
+                  <i class="icon"></i>Редукторы
+                  INNOVARI, INNORED </a>
+               <a href="/catalog/privody/elektrodvigateli-innovari-innored/">
+                  <i class="icon"></i>Электродвигатели
+                  INNOVARI, INNORED </a>
+               <a href="/catalog/privody/motor-reduktory-innovari-innored/">
+                  <i class="icon"></i>Мотор-редукторы
+                  INNOVARI, INNORED </a>
+            </div>
+         </div>
+         <div class="mobile-menu__catalog-block">
+            <div class="mobile-menu__catalog-block-title js-mobile-menu-toggle-catalog-block">Датчики<i
+                  class="icon icon--arrow-down"></i></div>
+            <div class="mobile-menu__catalog-block-dropdown">
+               <a href="/catalog/datchiki/datchiki-urovnya-sypuchikh-produktov-innolevel/">
+                  <i class="icon"></i>Датчики
+                  уровня сыпучих продуктов INNOLEVEL </a>
+               <a href="/catalog/datchiki/datchiki-urovnya-zhidkikh-sred-innolevel/">
+                  <i class="icon"></i>Датчики
+                  уровня жидких сред INNOLEVEL </a>
+               <a href="/catalog/datchiki/datchiki-konveyernoy-bezopasnosti-innolevel/">
+                  <i class="icon"></i>Датчики
+                  конвейерной безопасности INNOLEVEL </a>
+               <a href="/catalog/datchiki/datchiki-pyli-innolevel/">
+                  <i class="icon"></i>Датчики
+                  пыли INNOLEVEL </a>
+               <a href="/catalog/datchiki/datchiki-ugla-povorota-enkodery-innocont/">
+                  <i class="icon"></i>Датчики
+                  угла поворота (энкодеры) INNOCONT </a>
+               <a href="/catalog/datchiki/beskontaktnye-datchiki-innocont/">
+                  <i class="icon"></i>Бесконтактные
+                  датчики INNOCONT </a>
+               <a href="/catalog/datchiki/datchiki-davleniya-innocont/">
+                  <i class="icon"></i>Датчики
+                  давления INNOCONT </a>
+               <a href="/catalog/datchiki/datchiki-temperatury-innocont-/">
+                  <i class="icon"></i>Датчики
+                  температуры INNOCONT </a>
+               <a href="/catalog/datchiki/datchiki-urovnya-baumer-/">
+                  <i class="icon"></i>Датчики
+                  уровня Baumer </a>
+               <a href="/catalog/datchiki/datchiki-kontsentratsii-baumer-/">
+                  <i class="icon"></i>Датчики
+                  концентрации Baumer </a>
+               <a href="/catalog/datchiki/datchiki-potoka-baumer-/">
+                  <i class="icon"></i>Датчики
+                  потока Baumer </a>
+            </div>
+         </div>
+         <div class="mobile-menu__catalog-block">
+            <div class="mobile-menu__catalog-block-title js-mobile-menu-toggle-catalog-block">Автоматика<i
+                  class="icon icon--arrow-down"></i></div>
+            <div class="mobile-menu__catalog-block-dropdown">
+               <a href="/catalog/avtomatika/svetosignalnye-kolonny-innocont/">
+                  <i class="icon"></i>Светосигнальные
+                  колонны INNOCONT </a>
+               <a href="/catalog/avtomatika/termokontrollery-innocont/">
+                  <i class="icon"></i>Термоконтроллеры
+                  INNOCONT </a>
+               <a href="/catalog/avtomatika/istochniki-pitaniya-innocont/">
+                  <i class="icon"></i>Источники
+                  питания INNOCONT </a>
+               <a href="/catalog/avtomatika/prochaya-avtomatika/">
+                  <i class="icon"></i>Прочая
+                  автоматика </a>
+               <a href="/catalog/avtomatika/avtomatika-baumer/">
+                  <i class="icon"></i>Автоматика
+                  Baumer </a>
+               <a href="/catalog/avtomatika/avtomatika-autonics/">
+                  <i class="icon"></i>Автоматика
+                  Autonics </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="mobile-menu__links">
+      <div class="mobile-menu__links-column">
+         <a class="mobile-menu__links-item" href="/about/">О компании</a>
+         <a class="mobile-menu__links-item" href="/partners/">Партнерам</a>
+         <a class="mobile-menu__links-item" href="/blog/">Блог</a>
+         <a class="mobile-menu__links-item" href="/contacts/">Контакты</a>
+      </div>
+      <div class="mobile-menu__links-column">
+         <a class="mobile-menu__links-item" href="/solutions/">Решения</a>
+         <a class="mobile-menu__links-item" href="#">Где купить</a>
+         <div class="mobile-menu__links-item mobile-menu__links-item_parent js-mobile-menu-toggle-link" href="#">
+            <div class="mobile-menu__links-item-text">Поддержка<i class="icon icon--arrow-down"></i></div>
+            <div class="mobile-menu__links-item-dropdown">
+               <a class="mobile-menu__links-item" href="./guarantee.html">Гарантия и сервис</a>
+               <a class="mobile-menu__links-item" href="./quality.html">Политика качества</a>
+               <a class="mobile-menu__links-item" href="./product-selection.html">Подбор продукта</a>
+               <a class="mobile-menu__links-item" href="./documentation.html">Документация</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="mobile-menu__footer">
+      <button class="button button--outline popup-open" type="button" data-mfp-src="#call-popup">
+         Обратный звонок </button>
+      <div class="mobile-menu__actions">
+         <a href="#" aria-label="Профиль">
+            <i class="icon icon--user"></i>
+         </a>
+         <a href="#" aria-label="Избранное">
+            <i class="icon icon--favorite"></i>
+         </a>
+      </div>
+   </div>
+</nav>
+      <main>
+         <div class="container">
+            <div class="nav-breadcrumbs">
+               <div class="nav-breadcrumbs__item">
+                  <a class="nav-breadcrumbs__link" href="/">
+                     <span class="nav-breadcrumbs__text">Главная</span>
+                  </a>
+               </div>
+               <div class="nav-breadcrumbs__separator">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g clip-path="url(#clip0_1416_10214)">
+                        <path d="M7.1582 13.825L10.9749 10L7.1582 6.175L8.3332 5L13.3332 10L8.3332 15L7.1582 13.825Z"
+                           fill="#353535"></path>
+                        </path>
+                     </g>
+                     <defs>
+                        <clipPath id="clip0_1416_10214">
+                           <rect width="20" height="20" fill="white"></rect>
+                        </clipPath>
+                     </defs>
+                  </svg>
+               </div>
+               <div class="nav-breadcrumbs__item">
+                  <a class="nav-breadcrumbs__link" href="/">
+                     <span class="nav-breadcrumbs__text">Услуги</span>
+                  </a>
+               </div>
+               <div class="nav-breadcrumbs__separator">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g clip-path="url(#clip0_1416_10214)">
+                        <path d="M7.1582 13.825L10.9749 10L7.1582 6.175L8.3332 5L13.3332 10L8.3332 15L7.1582 13.825Z"
+                           fill="#353535"></path>
+                        </path>
+                        </path>
+                     </g>
+                     <defs>
+                        <clipPath id="clip0_1416_10214">
+                           <rect width="20" height="20" fill="white"></rect>
+                        </clipPath>
+                     </defs>
+                  </svg>
+               </div>
+               <div class="nav-breadcrumbs__item"><span class="nav-breadcrumbs__text">Учебный центр</span></div>
+            </div>
+            <section class="hero-banner">
+               <div class="hero-banner__text">
+                  <h1 class="hero-banner__title fv-title blue">Учебный центр</h1>
+                  <div class="hero-banner__description">Текст о компании. Текст о компании. Текст о компании. Текст о
+                     компании. Текст о компании. Текст о компании. Текст о компании. Текст о компании. Текст о компании.
+                     Текст о компании. Текст о компании. Текст о компании. Текст о компании. Текст о компании. Текст о
+                     компании. Текст о компании. Текст о компании. Текст о компании. Текст о компании. Текст о компании.
+                     Текст о компании. Текст о компании. Текст о компании. Текст о компании. Текст о Текст о компании.
+                     Текст о компании. Текст о компании.</div>
+                  <div class="hero-banner__button">
+                     <button type="button" class="button button--red open-popup" data-popup="">Оставить запрос</button>
+                  </div>
+               </div>
+               <div class="hero-banner__image">
+                  <img src="img/hero-banner.png" alt="">
+               </div>
+            </section>
+            <section class="section-about section-margin">
+               <div class="section-title">
+                  <h2 class="section-title__text fv-section-title-sm">
+                     О нас в цифрах </h2>
+               </div>
+               <div class="about-container">
+                  <div class="about-stats">
+                     <div class="stat-item">
+                        <span class="stat-item__value">17+</span>
+                        <p class="stat-item__label">лет на российском<br>рынке</p>
+                     </div>
+                     <div class="stat-item">
+                        <span class="stat-item__value">5</span>
+                        <p class="stat-item__label">собственных торговых<br> марок</p>
+                     </div>
+                     <div class="stat-item">
+                        <span class="stat-item__value">24</span>
+                        <p class="stat-item__label">дилера со складами <br> в России и Беларуси</p>
+                     </div>
+                     <div class="stat-item">
+                        <span class="stat-item__value">3</span>
+                        <p class="stat-item__label">региональных офиса: Москва,<br>Санкт-Петербург, Владивосток</p>
+                     </div>
+                     <div class="stat-item">
+                        <span class="stat-item__value">91%</span>
+                        <p class="stat-item__label">заказов отгружается из<br>наличия</p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="section-values section-margin">
+               <div class="section-title">
+                  <h2 class="section-title__text fv-section-title-sm">
+                     О сотрудничестве</h2>
+                  <p class="values-content__description">Текст о сотрудничестве. 20 лет производим и поставляем
+                     компоненты для промышленной автоматизации. 20 лет производим и
+                     поставляем компоненты для промышленной автоматизации. 20 лет производим и поставляем компоненты для
+                     промышленной
+                     автоматизации. Текст о компании. 20 лет производим и поставляем компоненты для промышленной
+                     автоматизации.</p>
+               </div>
+               <div class="values-container">
+                  <div class="values-content">
+                     <div class="values-list">
+                        <div class="values-item">
+                           <h3 class="values-item__subtitle">Подзаголовок пункта - 1</h3>
+                           <p class="values-item__text">Текст о компании. Текст о компании. Текст о компании. Текст о
+                              компании. Текст о компании. Текст о компании. Текст о
+                              компании. Текст о компании. Текст о компании.</p>
+                        </div>
+                        <div class="values-item">
+                           <h3 class="values-item__subtitle">Подзаголовок пункта - 2</h3>
+                           <p class="values-item__text">Текст о компании. Текст о компании. Текст о компании. Текст о
+                              компании. Текст о компании. Текст о компании. Текст о
+                              компании. Текст о компании. Текст о компании.</p>
+                        </div>
+                        <div class="values-item">
+                           <h3 class="values-item__subtitle">Подзаголовок пункта - 3</h3>
+                           <p class="values-item__text">Текст о компании. Текст о компании. Текст о компании. Текст о
+                              компании. Текст о компании. Текст о компании. Текст о
+                              компании. Текст о компании. Текст о компании.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="values-video values-media">
+                     <div class="video-wrapper">
+                        <img class="video-wrapper__thumbnail" src="img/team/resume.jpg" alt="Видео о компании">
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="education section-margin">
+               <h2 class="section-title__text fv-section-title-sm">Обучение</h2>
+               <div class="education__body">
+                  <div class="education__panel">
+                     <div class="education__tags fv-tags">
+                        <button class="education__tag fv-tag active" data-tab="1">Курсы</button>
+                        <button class="education__tag fv-tag" data-tab="2">Вебинары</button>
+                        <button class="education__tag fv-tag" data-tab="3">Учебный класс</button>
+                     </div>
+                     <div class="education__filters">
+                        <div class="education__filters-button">
+                           <img src="img/icons/filter.svg" alt="">
+                           Фильтры
+                        </div>
+                        <div class="education__filters-body">
+                           <div class="education__filters-items">
+                              <div class="education__filters-item">
+                                 <p>Тип оборудования:</p>
+                                 <div class="custom-select js-custom-select">
+                                    <select class="custom-select__control" name="sort_m">
+                                       <option value="sort_asc">Название типа</option>
+                                       <option value="date_desc">Дата</option>
+                                       <option value="id_desc">ID по убыванию</option>
+                                       <option value="id_asc">ID по возрастанию</option>
+                                    </select>
+                                    <div class="custom-select__value">
+                                       <div class="custom-select__value-text">Название типа</div>
+                                       <img src="img/icons/chevron-bottom.svg" class="custom-select__value-icon" alt="">
+                                    </div>
+                                    <div class="custom-select__dropdown">
+                                       <a class="custom-select__dropdown-item" href="#" data-value="date_desc">Название
+                                          типа</a>
+                                       <a class="custom-select__dropdown-item" href="#" data-value="id_desc">ID по
+                                          убыванию</a>
+                                       <a class="custom-select__dropdown-item" href="#" data-value="id_asc">ID по
+                                          возрастанию</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="education__filters-item">
+                                 <p>Специализация:</p>
+                                 <div class="custom-select js-custom-select">
+                                    <select class="custom-select__control" name="sort_m">
+                                       <option value="sort_asc">Название специальности</option>
+                                       <option value="date_desc">Дата</option>
+                                       <option value="id_desc">ID по убыванию</option>
+                                       <option value="id_asc">ID по возрастанию</option>
+                                    </select>
+                                    <div class="custom-select__value">
+                                       <div class="custom-select__value-text">Название специальности</div>
+                                       <img src="img/icons/chevron-bottom.svg" class="custom-select__value-icon" alt="">
+                                    </div>
+                                    <div class="custom-select__dropdown">
+                                       <a class="custom-select__dropdown-item" href="#" data-value="date_desc">Название
+                                          специальности</a>
+                                       <a class="custom-select__dropdown-item" href="#" data-value="id_desc">ID по
+                                          убыванию</a>
+                                       <a class="custom-select__dropdown-item" href="#" data-value="id_asc">ID по
+                                          возрастанию</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="education__filters-item">
+                                 <p>Торговая марка:</p>
+                                 <div class="custom-select js-custom-select">
+                                    <select class="custom-select__control" name="sort_m">
+                                       <option value="sort_asc">Название торговой марки</option>
+                                       <option value="date_desc">Дата</option>
+                                       <option value="id_desc">ID по убыванию</option>
+                                       <option value="id_asc">ID по возрастанию</option>
+                                    </select>
+                                    <div class="custom-select__value">
+                                       <div class="custom-select__value-text">Название торговой марки</div>
+                                       <img src="img/icons/chevron-bottom.svg" class="custom-select__value-icon" alt="">
+                                    </div>
+                                    <div class="custom-select__dropdown">
+                                       <a class="custom-select__dropdown-item" href="#" data-value="date_desc">Название
+                                          торговой марки</a>
+                                       <a class="custom-select__dropdown-item" href="#" data-value="id_desc">ID по
+                                          убыванию</a>
+                                       <a class="custom-select__dropdown-item" href="#" data-value="id_asc">ID по
+                                          возрастанию</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="education__contents">
+                     <div class="education__content show" data-content="1">
+                        <div class="education__courses">
+                           <div class="education__slider swiper">
+                              <div class="swiper-wrapper">
+                                 <div class="education__slide education__course swiper-slide">
+                                    <div class="education__course-image">
+                                       <img src="img/education/course-1.png" alt="">
+                                    </div>
+                                    <div class="education__course-name">Название курса, возможно длинное написание в 2
+                                       строки</div>
+                                    <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                       printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                       dummy text ever since the 1500s</div>
+                                    <div class="education__course-info">
+                                       <p>
+                                          <img src="img/icons/book.svg" alt="">
+                                          Название формы обучения
+                                       </p>
+                                       <p>
+                                          <img src="img/icons/location.svg" alt="">
+                                          г. Москва, улица Красная, дом 49 офис 9321 5 этаж
+                                       </p>
+                                    </div>
+                                    <div class="education__course-buttons">
+                                       <button type="button" class="button button--red open-popup"
+                                          data-popup="educationPopup">Записаться</button>
+                                       <a href="" class="button button--empty-blue">Подробнее</a>
+                                    </div>
+                                 </div>
+                                 <div class="education__slide education__course swiper-slide">
+                                    <div class="education__course-image">
+                                       <img src="img/education/course-1.png" alt="">
+                                    </div>
+                                    <div class="education__course-name">Название курса, возможно длинное написание в 2
+                                       строки</div>
+                                    <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                       printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                       dummy text ever since the 1500s</div>
+                                    <div class="education__course-info">
+                                       <p>
+                                          <img src="img/icons/book.svg" alt="">
+                                          Название формы обучения
+                                       </p>
+                                       <p>
+                                          <img src="img/icons/location.svg" alt="">
+                                          г. Москва, улица Красная, дом 49 офис 9321 5 этаж
+                                       </p>
+                                    </div>
+                                    <div class="education__course-buttons">
+                                       <button type="button" class="button button--red open-popup"
+                                          data-popup="educationPopup">Записаться</button>
+                                       <a href="" class="button button--empty-blue">Подробнее</a>
+                                    </div>
+                                 </div>
+                                 <div class="education__slide education__course swiper-slide">
+                                    <div class="education__course-image">
+                                       <img src="img/education/course-1.png" alt="">
+                                    </div>
+                                    <div class="education__course-name">Название курса, возможно длинное написание в 2
+                                       строки</div>
+                                    <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                       printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                       dummy text ever since the 1500s</div>
+                                    <div class="education__course-info">
+                                       <p>
+                                          <img src="img/icons/book.svg" alt="">
+                                          Название формы обучения
+                                       </p>
+                                       <p>
+                                          <img src="img/icons/location.svg" alt="">
+                                          г. Москва, улица Красная, дом 49 офис 9321 5 этаж
+                                       </p>
+                                    </div>
+                                    <div class="education__course-buttons">
+                                       <button type="button" class="button button--red open-popup"
+                                          data-popup="educationPopup">Записаться</button>
+                                       <a href="" class="button button--empty-blue">Подробнее</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="education__slider-buttons">
+                              <div class="education__slider-prev slider__prev">
+                                 <i class="icon icon--prev"></i>
+                              </div>
+                              <div class="education__slider-next slider__next">
+                                 <i class="icon icon--next"></i>
+                              </div>
+                           </div>
+                           <div class="education__courses-more">
+                              <button type="button" class="button button-blue">Показать еще курсы</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="education__content" data-content="2">
+                        <div class="education__webinars">
+                           <div class="education__slider swiper">
+                              <div class="swiper-wrapper">
+                                 <div class="education__slide education__webinar swiper-slide">
+                                    <div class="education__course-name">Название курса, возможно длинное написание в 2
+                                       строки</div>
+                                    <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                       printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                       dummy text ever since the 1500s</div>
+                                    <div class="education__webinar-media fv-player">
+                                       <div class="education__webinar-media-play fv-player__play">
+                                          <img src="img/icons/play.svg" alt="">
+                                       </div>
+                                       <video src="files/video.mp4" class="fv-player__video"
+                                          poster="img/education/course-1.png" preload="none" playsinline></video>
+                                    </div>
+                                 </div>
+                                 <div class="education__slide education__webinar swiper-slide">
+                                    <div class="education__course-name">Название курса, возможно длинное написание в 2
+                                       строки</div>
+                                    <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                       printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                       dummy text ever since the 1500s</div>
+                                    <div class="education__webinar-media fv-player">
+                                       <div class="education__webinar-media-play fv-player__play">
+                                          <img src="img/icons/play.svg" alt="">
+                                       </div>
+                                       <video src="files/video.mp4" class="fv-player__video"
+                                          poster="img/education/course-1.png" preload="none" playsinline></video>
+                                    </div>
+                                 </div>
+                                 <div class="education__slide education__webinar swiper-slide">
+                                    <div class="education__course-name">Название курса, возможно длинное написание в 2
+                                       строки</div>
+                                    <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                       printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                       dummy text ever since the 1500s</div>
+                                    <div class="education__webinar-media fv-player">
+                                       <div class="education__webinar-media-play fv-player__play">
+                                          <img src="img/icons/play.svg" alt="">
+                                       </div>
+                                       <video src="files/video.mp4" class="fv-player__video"
+                                          poster="img/education/course-1.png" preload="none" playsinline></video>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="education__slider-buttons">
+                              <div class="education__slider-prev slider__prev">
+                                 <i class="icon icon--prev"></i>
+                              </div>
+                              <div class="education__slider-next slider__next">
+                                 <i class="icon icon--next"></i>
+                              </div>
+                           </div>
+                           <div class="education__courses-more">
+                              <button type="button" class="button button-blue">Показать еще вебинары</button>
+                           </div>
+                        </div>
+                        <div class="education__calendar section-margin">
+                           <div class="education__calendar-info">
+                              <h2 class="education__calendar-title fv-section-title-sm">Календарь мероприятий</h2>
+                              <div class="education__calendar-dates datepicker" id="datepicker"
+                                 data-active-dates="06.07.2025,10.07.2025,15.07.2025,22.07.2025,30.07.2025,5.08.2025">
+                              </div>
+                           </div>
+                           <div class="education__calendar-webinars">
+                              <div class="education__subslider-buttons">
+                                 <div class="education__subslider-prev slider__prev">
+                                    <i class="icon icon--prev"></i>
+                                 </div>
+                                 <div class="education__subslider-next slider__next">
+                                    <i class="icon icon--next"></i>
+                                 </div>
+                              </div>
+                              <div class="education__subslider swiper education__dating-slider">
+                                 <div class="swiper-wrapper">
+                                    <div class="education__slide education__webinar swiper-slide">
+                                       <div class="education__webinar-media fv-player">
+                                          <img src="img/education/course-1.png" alt="">
+                                       </div>
+                                       <div class="education__course-info">
+                                          <p>
+                                             <img src="img/icons/calendar.svg" alt="">
+                                             6 июня 2025 г.
+                                          </p>
+                                       </div>
+                                       <div class="education__course-name">Название курса, возможно длинное написание в
+                                          2
+                                          строки</div>
+                                       <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has been the industry's
+                                          standard
+                                          dummy text ever since the 1500s</div>
+                                       <div class="education__course-button">
+                                          <button type="button" class="button button--red open-popup"
+                                             data-popup="educationPopup">Записаться</button>
+                                       </div>
+                                    </div>
+                                    <div class="education__slide education__webinar swiper-slide">
+                                       <div class="education__webinar-media fv-player">
+                                          <img src="img/education/course-1.png" alt="">
+                                       </div>
+                                       <div class="education__course-info">
+                                          <p>
+                                             <img src="img/icons/calendar.svg" alt="">
+                                             6 июня 2025 г.
+                                          </p>
+                                       </div>
+                                       <div class="education__course-name">Название курса, возможно длинное написание в
+                                          2
+                                          строки</div>
+                                       <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has been the industry's
+                                          standard
+                                          dummy text ever since the 1500s</div>
+                                       <div class="education__course-button">
+                                          <button type="button" class="button button--red open-popup"
+                                             data-popup="educationPopup">Записаться</button>
+                                       </div>
+                                    </div>
+                                    <div class="education__slide education__webinar swiper-slide">
+                                       <div class="education__webinar-media fv-player">
+                                          <img src="img/education/course-1.png" alt="">
+                                       </div>
+                                       <div class="education__course-info">
+                                          <p>
+                                             <img src="img/icons/calendar.svg" alt="">
+                                             6 июня 2025 г.
+                                          </p>
+                                       </div>
+                                       <div class="education__course-name">Название курса, возможно длинное написание в
+                                          2
+                                          строки</div>
+                                       <div class="education__course-descr">Lorem Ipsum is simply dummy text of the
+                                          printing and typesetting industry. Lorem Ipsum has been the industry's
+                                          standard
+                                          dummy text ever since the 1500s</div>
+                                       <div class="education__course-button">
+                                          <button type="button" class="button button--red open-popup"
+                                             data-popup="educationPopup">Записаться</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="education__content" data-content="3">
+                        <div class="education__classroom">
+                           <div class="education__classroom-info">
+                              <h2 class="education__classroom-title fv-section-title-sm">Учебный класс</h2>
+                              <div class="education__classroom-descr">
+                                 <p>Описание результата описание результата описание результата описание результата
+                                    описание результата описание результата
+                                    описание результата описание результата описание результата описание результата
+                                    описание результата описание результата</p>
+                                 <p>Описание результата описание результата описание результата описание результата
+                                    описание результата описание
+                                    результата
+                                    описание результата описание результата описание результата описание результата
+                                    описание результата описание
+                                    результата</p>
+                                 <p>Описание результата описание результата описание результата описание результата
+                                    описание результата описание
+                                    результата
+                                    описание результата описание результата описание результата описание результата
+                                    описание результата описание
+                                    результата</p>
+                              </div>
+                           </div>
+                           <div class="education__classroom-gallery fv-team">
+                              <div class="education__classroom-slider fv-team__slider swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="fv-team__slide swiper-slide">
+                                       <a data-fancybox="team-gallery" class="fv-team__slide-image"
+                                          href="img/team/1.png">
+                                          <img src="img/team/1.png" alt="">
+                                       </a>
+                                    </div>
+                                    <div class="fv-team__slide swiper-slide">
+                                       <a data-fancybox="team-gallery" class="fv-team__slide-image"
+                                          href="img/team/1.png">
+                                          <img src="img/team/1.png" alt="">
+                                       </a>
+
+                                    </div>
+                                    <div class="fv-team__slide swiper-slide">
+                                       <a data-fancybox="team-gallery" class="fv-team__slide-image"
+                                          href="img/team/1.png">
+                                          <img src="img/team/1.png" alt="">
+                                       </a>
+                                    </div>
+                                    <div class="fv-team__slide swiper-slide">
+                                       <a data-fancybox="team-gallery" class="fv-team__slide-image"
+                                          href="img/team/1.png">
+                                          <img src="img/team/1.png" alt="">
+                                       </a>
+                                    </div>
+                                    <div class="fv-team__slide swiper-slide">
+                                       <a data-fancybox="team-gallery" class="fv-team__slide-image"
+                                          href="img/team/1.png">
+                                          <img src="img/team/1.png" alt="">
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="fv-team__slider-buttons">
+                                 <div class="fv-team__slider-prev slider__prev">
+                                    <i class="icon icon--prev"></i>
+                                 </div>
+                                 <div class="fv-team__slider-next slider__next">
+                                    <i class="icon icon--next"></i>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <section class="more-products">
+                           <div class="more-products__head">
+                              <h2 class="fv-section-title-sm">Оборудование в учебном классе</h2>
+                              <div class="more-products__buttons">
+                                 <div class="more-products__prev slider__prev">
+                                    <i class="icon icon--prev"></i>
+                                 </div>
+                                 <div class="more-products__next slider__next">
+                                    <i class="icon icon--next"></i>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="more-products__body">
+                              <div class="more-products__slider swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="more-products__slide product-preview swiper-slide">
+                                       <a href="" class="product-preview__images swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                          </div>
+                                          <div class="product-preview__images-pagination swiper-pagination"></div>
+                                       </a>
+                                       <div class="product-preview__info">
+                                          <a href="" class="product-preview__name">INNOVERTв корпусе IP54 со встроенным
+                                             потенциометром</a>
+                                          <p class="product-preview__subname">серия ISD mini PLUS</p>
+                                          <p class="product-preview__descr">Частотные преобразователи купить в Москве,
+                                             цена
+                                             частотника в каталоге «Приводная
+                                             техника». Частотные преобразователи
+                                             купить в Москве, цена частотника в каталоге «Приводная техника».</p>
+                                          <div class="product-preview__compare">
+                                             <label class="custom-checkbox">
+                                                <input type="checkbox" required>
+                                                <span class="custom-checkbox__box"></span><span>Сравнить</span>
+                                             </label>
+                                          </div>
+                                          <div class="product-preview__price">36 987 ₽</div>
+                                          <div class="product-preview__buttons">
+                                             <button type="button" class="product-preview__cart button-blue">В
+                                                корзину</button>
+                                             <button type="button" class="product-preview__wishlist">
+                                                <img src="img/icons/wishlist.svg"
+                                                   class="product-preview__wishlist-empty" alt="">
+                                                <img src="img/icons/wishlist-fill.svg"
+                                                   class="product-preview__wishlist-added" alt="">
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="more-products__slide product-preview swiper-slide">
+                                       <a href="" class="product-preview__images swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                          </div>
+                                          <div class="product-preview__images-pagination swiper-pagination"></div>
+                                       </a>
+                                       <div class="product-preview__info">
+                                          <a href="" class="product-preview__name">Самый универсальный и популярный
+                                             INNOVERT</a>
+                                          <p class="product-preview__subname">серия ISD mini PLUS</p>
+                                          <p class="product-preview__descr">Частотные преобразователи купить в Москве,
+                                             цена
+                                             частотника в каталоге «Приводная
+                                             техника». Частотные преобразователи
+                                             купить в Москве, цена частотника в каталоге «Приводная техника».</p>
+                                          <div class="product-preview__compare">
+                                             <label class="custom-checkbox">
+                                                <input type="checkbox" required>
+                                                <span class="custom-checkbox__box"></span><span>Сравнить</span>
+                                             </label>
+                                          </div>
+                                          <div class="product-preview__price">36 987 ₽</div>
+                                          <div class="product-preview__buttons">
+                                             <button type="button" class="product-preview__cart button-blue">В
+                                                корзину</button>
+                                             <button type="button" class="product-preview__wishlist">
+                                                <img src="img/icons/wishlist.svg"
+                                                   class="product-preview__wishlist-empty" alt="">
+                                                <img src="img/icons/wishlist-fill.svg"
+                                                   class="product-preview__wishlist-added" alt="">
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="more-products__slide product-preview swiper-slide">
+                                       <a href="" class="product-preview__images swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                          </div>
+                                          <div class="product-preview__images-pagination swiper-pagination"></div>
+                                       </a>
+                                       <div class="product-preview__info">
+                                          <a href="" class="product-preview__name">INNOVERTв корпусе IP54 со встроенным
+                                             потенциометром</a>
+                                          <p class="product-preview__subname">серия ISD mini PLUS</p>
+                                          <p class="product-preview__descr">Частотные преобразователи купить в Москве,
+                                             цена
+                                             частотника в каталоге «Приводная
+                                             техника». Частотные преобразователи
+                                             купить в Москве, цена частотника в каталоге «Приводная техника».</p>
+                                          <div class="product-preview__compare">
+                                             <label class="custom-checkbox">
+                                                <input type="checkbox" required>
+                                                <span class="custom-checkbox__box"></span><span>Сравнить</span>
+                                             </label>
+                                          </div>
+                                          <div class="product-preview__price">36 987 ₽</div>
+                                          <div class="product-preview__buttons">
+                                             <button type="button" class="product-preview__cart button-blue">В
+                                                корзину</button>
+                                             <button type="button" class="product-preview__wishlist">
+                                                <img src="img/icons/wishlist.svg"
+                                                   class="product-preview__wishlist-empty" alt="">
+                                                <img src="img/icons/wishlist-fill.svg"
+                                                   class="product-preview__wishlist-added" alt="">
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="more-products__slide product-preview swiper-slide">
+                                       <a href="" class="product-preview__images swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                          </div>
+                                          <div class="product-preview__images-pagination swiper-pagination"></div>
+                                       </a>
+                                       <div class="product-preview__info">
+                                          <a href="" class="product-preview__name">Самый универсальный и популярный
+                                             INNOVERT</a>
+                                          <p class="product-preview__subname">серия ISD mini PLUS</p>
+                                          <p class="product-preview__descr">Частотные преобразователи купить в Москве,
+                                             цена
+                                             частотника в каталоге «Приводная
+                                             техника». Частотные преобразователи
+                                             купить в Москве, цена частотника в каталоге «Приводная техника».</p>
+                                          <div class="product-preview__compare">
+                                             <label class="custom-checkbox">
+                                                <input type="checkbox" required>
+                                                <span class="custom-checkbox__box"></span><span>Сравнить</span>
+                                             </label>
+                                          </div>
+                                          <div class="product-preview__price">36 987 ₽</div>
+                                          <div class="product-preview__buttons">
+                                             <button type="button" class="product-preview__cart button-blue">В
+                                                корзину</button>
+                                             <button type="button" class="product-preview__wishlist">
+                                                <img src="img/icons/wishlist.svg"
+                                                   class="product-preview__wishlist-empty" alt="">
+                                                <img src="img/icons/wishlist-fill.svg"
+                                                   class="product-preview__wishlist-added" alt="">
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="more-products__slide product-preview swiper-slide">
+                                       <a href="" class="product-preview__images swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/2.png" alt="">
+                                             </div>
+                                             <div class="product-preview__image swiper-slide">
+                                                <img src="img/products/1.png" alt="">
+                                             </div>
+                                          </div>
+                                          <div class="product-preview__images-pagination swiper-pagination"></div>
+                                       </a>
+                                       <div class="product-preview__info">
+                                          <a href="" class="product-preview__name">INNOVERTв корпусе IP54 со встроенным
+                                             потенциометром</a>
+                                          <p class="product-preview__subname">серия ISD mini PLUS</p>
+                                          <p class="product-preview__descr">Частотные преобразователи купить в Москве,
+                                             цена
+                                             частотника в каталоге «Приводная
+                                             техника». Частотные преобразователи
+                                             купить в Москве, цена частотника в каталоге «Приводная техника».</p>
+                                          <div class="product-preview__compare">
+                                             <label class="custom-checkbox">
+                                                <input type="checkbox" required>
+                                                <span class="custom-checkbox__box"></span><span>Сравнить</span>
+                                             </label>
+                                          </div>
+                                          <div class="product-preview__price">36 987 ₽</div>
+                                          <div class="product-preview__buttons">
+                                             <button type="button" class="product-preview__cart button-blue">В
+                                                корзину</button>
+                                             <button type="button" class="product-preview__wishlist">
+                                                <img src="img/icons/wishlist.svg"
+                                                   class="product-preview__wishlist-empty" alt="">
+                                                <img src="img/icons/wishlist-fill.svg"
+                                                   class="product-preview__wishlist-added" alt="">
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </section>
+                        <section class="education__classroom-about section-margin">
+                           <h2 class="fv-section-title-sm">Об обучении</h2>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis arcu sit amet
+                              leo laoreet dapibus. Sed a
+                              malesuada orci. Sed dictum sit amet ligula eget porta. Sed laoreet massa id pellentesque
+                              viverra. Donec viverra turpis
+                              tortor, eu suscipit tortor ornare eu. Vivamus felis quam, fringilla vel lectus facilisis,
+                              tempor consequat magna.
+                              Vivamus eget purus non leo fermentum tempus. Sed ullamcorper bibendum felis ut gravida.
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis arcu sit amet
+                              leo laoreet dapibus. Sed a
+                              malesuada orci. Sed dictum sit amet ligula eget porta. Sed laoreet massa id pellentesque
+                              viverra. Donec viverra turpis
+                              tortor, eu suscipit tortor ornare eu. Vivamus felis quam, fringilla vel lectus facilisis,
+                              tempor consequat magna.
+                              Vivamus eget purus non leo fermentum tempus. Sed ullamcorper bibendum felis ut gravida.
+                           </p>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="fv-team">
+               <h3 class="fv-section-title-sm">Галерея</h3>
+               <div class="fv-team__gallery full-width">
+                  <div class="fv-team__slider swiper">
+                     <div class="swiper-wrapper">
+                        <div class="fv-team__slide swiper-slide">
+                           <a data-fancybox="team-gallery" class="fv-team__slide-image" href="img/team/1.png">
+                              <img src="img/team/1.png" alt="">
+                           </a>
+                        </div>
+                        <div class="fv-team__slide swiper-slide">
+                           <a data-fancybox="team-gallery" class="fv-team__slide-image" href="img/team/1.png">
+                              <img src="img/team/1.png" alt="">
+                           </a>
+
+                        </div>
+                        <div class="fv-team__slide swiper-slide">
+                           <a data-fancybox="team-gallery" class="fv-team__slide-image" href="img/team/1.png">
+                              <img src="img/team/1.png" alt="">
+                           </a>
+                        </div>
+                        <div class="fv-team__slide swiper-slide">
+                           <a data-fancybox="team-gallery" class="fv-team__slide-image" href="img/team/1.png">
+                              <img src="img/team/1.png" alt="">
+                           </a>
+                        </div>
+                        <div class="fv-team__slide swiper-slide">
+                           <a data-fancybox="team-gallery" class="fv-team__slide-image" href="img/team/1.png">
+                              <img src="img/team/1.png" alt="">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="fv-team__slider-buttons">
+                     <div class="fv-team__slider-prev slider__prev">
+                        <i class="icon icon--prev"></i>
+                     </div>
+                     <div class="fv-team__slider-next slider__next">
+                        <i class="icon icon--next"></i>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </main>
+      <footer class="footer">
+   <button class="button-up visible" type="button" style="bottom: 308.7px;"><i class="icon icon--arrow-up"></i></button>
+   <div class="footer-container">
+      <div class="footer-top">
+         <a class="footer-logo" href="#">
+            <img src="img/logo-w.png" alt="Промситех">
+         </a>
+         <div class="footer-menu">
+            <ul class="footer-menu__list">
+               <li class="footer-menu__item"><a class="footer-menu__link" href="/catalog/">Каталог</a></li>
+               <li class="footer-menu__item"><a class="footer-menu__link" href="/about/">О компании</a></li>
+               <li class="footer-menu__item"><a class="footer-menu__link" href="/solutions/">Решения</a></li>
+               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Партнерам</a></li>
+            </ul>
+            <ul class="footer-menu__list">
+               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Где купить</a></li>
+               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Поддержка</a></li>
+               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Доставка</a></li>
+               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+            </ul>
+         </div>
+         <div class="footer-contacts">
+            <ul class="footer-contacts__list">
+               <li class="footer-contacts__item">
+                  <i class="icon icon--phone"></i>
+                  <a href="tel:88006003426">
+                     8 800 600 34 26 </a>
+               </li>
+               <li class="footer-contacts__item">
+                  <i class="icon icon--email"></i>
+                  <a href="mailto:info@prst.ru">
+                     info@prst.ru </a>
+               </li>
+               <li class="footer-contacts__item">
+                  <i class="icon icon--address"></i>
+                  <span>
+                     г. Москва, ул. Байкальская, д. 4, 3 этаж.офис<br>г. Москва, Электрозаводская, 27с2, этаж 2, БЦ
+                     Лефорт </span>
+               </li>
+            </ul>
+         </div>
+         <button class="button button--red popup-open" type="button" data-mfp-src="#call-popup">
+            Обратный звонок </button>
+      </div>
+      <div class="footer-bottom">
+         <a class="footer-bottom__link" href="#">
+            Политика обработки персональных данных </a>
+         <div class="footer-social">
+            <a class="social-link" href="#">
+               <i class="icon icon--telegram"></i>
+            </a>
+            <a class="social-link" href="#">
+               <i class="icon icon--star"></i>
+            </a>
+            <a class="social-link" href="#">
+               <i class="icon icon--vk"></i>
+            </a>
+            <a class="social-link" href="#">
+               <i class="icon icon--yt"></i>
+            </a>
+         </div> <a class="footer-bottom__developer" href="#">
+            <span>
+               Разработка сайта </span>
+            <i class="icon icon--completo"></i>
+         </a>
+      </div>
+   </div>
+</footer>
+      <div class="education-popup fv-popup" id="educationPopup">
+         <div class="education-popup__body fv-popup__body">
+            <div class="education-popup__title">Записаться на вебинар
+               <span>“Название вебинара”</span>
+            </div>
+            <form class="education-popup__form">
+               <div class="education-popup__form-area">
+                  <input class="theme-input" name="name" placeholder="Имя*" required="">
+               </div>
+               <div class="education-popup__form-area">
+                  <input class="theme-input" type="tel" name="phone" placeholder="Номер телефона*" required=""
+                     inputmode="text">
+               </div>
+               <div class="education-popup__form-area">
+                  <input class="theme-input" name="email" placeholder="Email*" required="">
+               </div>
+               <div class="education-popup__form-area">
+                  <input class="theme-input" name="city" placeholder="Город*" required="">
+               </div>
+               <div class="education-popup__form-area">
+                  <textarea class="theme-textarea" name="message" placeholder="Сообщение"></textarea>
+               </div>
+               <label class="custom-checkbox">
+                  <input type="checkbox" required="" name="agree">
+                  <span class="custom-checkbox__box"></span><span>Согласен на получение рекламных сообщений и обработку
+                     моих персональных данных в рекламных целях</span>
+               </label>
+               <label class="custom-checkbox">
+                  <input type="checkbox" required="" name="agree">
+                  <span class="custom-checkbox__box"></span><span>Отправляя заявку, даю свое согласие на
+                     обработку
+                     персональных данных в соответствии с <a href="">политикой конфиденциальности</a></span>
+               </label>
+               <button type="submit" class="button button--red">Отправить заявку</button>
+            </form>
+            <div class="education-popup__close fv-popup__close">
+               <img src="img/icons/close.svg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+   <script src="js/air-datepicker.min.js"></script>
+   <script src="js/theme.js"></script>
+   <script src="js/app.js"></script>
+</body>
+
+</html>
