@@ -124,43 +124,51 @@ document.addEventListener('DOMContentLoaded', function () {
 /*------------------------------
 Team gallery
 ---------------------------*/
-const teamSlider = document.querySelector(".fv-team__slider");
+document.querySelectorAll(".fv-team__slider").forEach((slider) => {
+   const container = slider.closest(".fv-team");
+   const nextBtn = container.querySelector(".fv-team__slider-next");
+   const prevBtn = container.querySelector(".fv-team__slider-prev");
 
-if (teamSlider) {
-   const teamSwiper = new Swiper(teamSlider, {
-      slidesPerView: 1.2,
+   const isClassroomSlider = slider.classList.contains("education__classroom-slider");
+
+   new Swiper(slider, {
+      slidesPerView: isClassroomSlider ? 1 : 1.2,
       centeredSlides: true,
       spaceBetween: 30,
       initialSlide: 1,
       loop: false,
       navigation: {
-         nextEl: '.fv-team__slider-next',
-         prevEl: '.fv-team__slider-prev',
+         nextEl: nextBtn,
+         prevEl: prevBtn,
       },
       breakpoints: {
          320: {
-            spaceBetween: 10
-
+            spaceBetween: 10,
+            slidesPerView: isClassroomSlider ? 1 : 1.2
          },
          768: {
-            spaceBetween: 10
+            spaceBetween: 10,
+            slidesPerView: isClassroomSlider ? 1 : 1.2
          },
          1024: {
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerView: isClassroomSlider ? 1 : 1.2
          }
       }
    });
+});
 
-   Fancybox.bind('[data-fancybox="team-gallery"]', {
-      Thumbs: true,
-      Toolbar: {
-         display: [
-            "zoom",
-            "close"
-         ]
-      }
-   });
-};
+
+
+Fancybox.bind('[data-fancybox="team-gallery"]', {
+   Thumbs: true,
+   Toolbar: {
+      display: [
+         "zoom",
+         "close"
+      ]
+   }
+});
 
 
 /*------------------------------
@@ -320,18 +328,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /*------------------------------
-More products slider
+More products sliders
 ---------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
-   const sliders = document.querySelectorAll(".more-products__slider");
+   const moreProductsliders = document.querySelectorAll(".more-products__slider");
 
-   sliders.forEach((slider, index) => {
-      const container = slider.closest(".more-products");
+   moreProductsliders.forEach((slider, index) => {
+      const moreProductsContainer = slider.closest(".more-products");
 
-      if (!container) return;
+      if (!moreProductsContainer) return;
 
-      const nextBtn = container.querySelector(".more-products__next");
-      const prevBtn = container.querySelector(".more-products__prev");
+      const nextBtn = moreProductsContainer.querySelector(".more-products__next");
+      const prevBtn = moreProductsContainer.querySelector(".more-products__prev");
 
       new Swiper(slider, {
          slidesPerView: 4,
@@ -343,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
          },
          breakpoints: {
             320: {
-               slidesPerView: 1.5,
+               slidesPerView: 1.3,
                spaceBetween: 10,
             },
             600: {
@@ -452,5 +460,186 @@ document.addEventListener("DOMContentLoaded", function () {
       }
    });
 });
+
+
+/*------------------------------
+Filters
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const filterButton = document.querySelector('.education__filters-button');
+   const filterBody = document.querySelector('.education__filters-body');
+
+   if (filterButton && filterBody) {
+      filterButton.addEventListener('click', () => {
+         filterBody.classList.toggle('show');
+         filterButton.classList.toggle('active');
+      });
+   }
+});
+
+
+/*------------------------------
+Education tabs
+---------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const tabButtons = document.querySelectorAll('.education__tag');
+   const tabContents = document.querySelectorAll('.education__content');
+
+   if (tabButtons.length && tabContents.length) {
+      tabButtons.forEach(button => {
+         button.addEventListener('click', () => {
+            const tabId = button.dataset.tab;
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('show'));
+
+            button.classList.add('active');
+            const targetContent = document.querySelector(`.education__content[data-content="${tabId}"]`);
+            if (targetContent) {
+               targetContent.classList.add('show');
+            }
+         });
+      });
+
+   }
+});
+
+
+/*------------------------------
+Education sliders
+---------------------------*/
+const educationSliders = document.querySelectorAll(".education__slider");
+const swiperInstances = new WeakMap();
+
+function initSliders() {
+   educationSliders.forEach((slider) => {
+      const container = slider.closest(".education__content");
+      const nextBtn = container.querySelector(".education__slider-next");
+      const prevBtn = container.querySelector(".education__slider-prev");
+      const isMobile = window.innerWidth < 767;
+
+      if (isMobile && !swiperInstances.has(slider)) {
+         if (nextBtn && prevBtn) {
+            const swiper = new Swiper(slider, {
+               slidesPerView: 'auto',
+               spaceBetween: 30,
+               loop: false,
+               navigation: {
+                  nextEl: nextBtn,
+                  prevEl: prevBtn,
+               },
+               breakpoints: {
+                  320: {
+                     spaceBetween: 10,
+                  },
+                  768: {
+                     spaceBetween: 20,
+                  },
+               },
+            });
+            swiperInstances.set(slider, swiper);
+         }
+      } else if (!isMobile && swiperInstances.has(slider)) {
+         const swiper = swiperInstances.get(slider);
+         swiper.destroy(true, true);
+         swiperInstances.delete(slider);
+      }
+   });
+}
+initSliders();
+window.addEventListener("resize", () => {
+   initSliders();
+});
+
+
+/*------------------------------
+Education subsliders
+---------------------------*/
+const educationSubslider = document.querySelector(".education__subslider");
+
+if (educationSubslider) {
+   const educationSubswiper = new Swiper(educationSubslider, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      loop: false,
+      navigation: {
+         nextEl: '.education__subslider-next',
+         prevEl: '.education__subslider-prev',
+      },
+      breakpoints: {
+         320: {
+            spaceBetween: 10
+         },
+         768: {
+            spaceBetween: 10
+         },
+         1024: {
+            spaceBetween: 30
+         }
+      }
+   });
+};
+
+
+/*------------------------------
+Videoplayer
+---------------------------*/
+document.querySelectorAll('.fv-player').forEach((player) => {
+   const playBtn = player.querySelector('.fv-player__play');
+   const video = player.querySelector('.fv-player__video');
+
+   if (!playBtn || !video) return;
+
+   playBtn.addEventListener('click', () => {
+      video.play();
+      playBtn.style.display = 'none';
+      video.setAttribute('controls', '');
+   });
+
+   video.addEventListener('click', () => {
+      if (!video.paused) {
+         video.pause();
+         playBtn.style.display = '';
+         video.removeAttribute('controls');
+      }
+   });
+});
+
+
+/*------------------------------
+Calendar
+---------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   const datepickerEl = document.querySelector('#datepicker');
+
+   // Проверка на наличие календаря
+   if (!datepickerEl) return;
+
+   const rawDates = datepickerEl.dataset.activeDates || '';
+   const activeDates = rawDates.split(',').map(date => date.trim());
+
+   new AirDatepicker(datepickerEl, {
+      dateFormat: 'dd.MM.yyyy',
+      visible: true,
+      onRenderCell({ date, cellType }) {
+         if (cellType === 'day') {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            const formatted = `${day}.${month}.${year}`;
+
+            if (activeDates.includes(formatted)) {
+               return {
+                  classes: 'active-day',
+                  attrs: {
+                     title: 'Есть вебинар'
+                  }
+               };
+            }
+         }
+      }
+   });
+});
+
 /******/ })()
 ;
