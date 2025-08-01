@@ -4825,6 +4825,29 @@ Documents
 .compare__table thead th:nth-child(2) {
   padding-left: 0;
 }
+.compare__table thead th:nth-child(2) .product-preview__images {
+  width: 340px;
+}
+@media (width < 1500px) {
+  .compare__table thead th:nth-child(2) .product-preview__images {
+    width: calc(25vw - 15px - 20px);
+  }
+}
+@media (width < 1200px) {
+  .compare__table thead th:nth-child(2) .product-preview__images {
+    width: calc(33.333vw - 15px - 20px);
+  }
+}
+@media (width < 980px) {
+  .compare__table thead th:nth-child(2) .product-preview__images {
+    width: calc(50vw - 15px - 20px);
+  }
+}
+@media (width < 767px) {
+  .compare__table thead th:nth-child(2) .product-preview__images {
+    width: 199px;
+  }
+}
 .compare__table thead th:not(:last-child, :first-child) {
   border-right: 2px solid #d9d9d9;
 }
@@ -4860,6 +4883,10 @@ Documents
 .compare__table td:not(:first-child) {
   padding: 20px;
 }
+.compare__table th .product-preview__images,
+.compare__table td .product-preview__images {
+  width: 320px;
+}
 .compare__table th:first-child,
 .compare__table td:first-child {
   padding: 20px 20px 20px 0;
@@ -4884,6 +4911,10 @@ Documents
   .compare__table td:first-child {
     width: calc(25vw - 15px);
   }
+  .compare__table th .product-preview__images,
+  .compare__table td .product-preview__images {
+    width: calc(25vw - 15px - 40px);
+  }
 }
 @media (width < 1200px) {
   .compare__table th,
@@ -4894,6 +4925,10 @@ Documents
   .compare__table td:first-child {
     width: calc(33.333vw - 15px);
   }
+  .compare__table th .product-preview__images,
+  .compare__table td .product-preview__images {
+    width: calc(33.333vw - 15px - 40px);
+  }
 }
 @media (width < 980px) {
   .compare__table th,
@@ -4903,6 +4938,10 @@ Documents
   .compare__table th:first-child,
   .compare__table td:first-child {
     width: calc(30vw - 15px);
+  }
+  .compare__table th .product-preview__images,
+  .compare__table td .product-preview__images {
+    width: calc(50vw - 15px - 40px);
   }
 }
 @media (width < 767px) {
@@ -4918,6 +4957,10 @@ Documents
   .compare__table th:first-child,
   .compare__table td:first-child {
     width: 214px;
+  }
+  .compare__table th .product-preview__images,
+  .compare__table td .product-preview__images {
+    width: 184px;
   }
 }
 .compare__table .product-preview .product-preview__image {
