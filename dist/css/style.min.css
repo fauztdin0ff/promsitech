@@ -5017,7 +5017,7 @@ Documents
   }
   .compare__table .lable-cell {
     position: absolute;
-    display: inline-block;
+    display: block;
     z-index: 5;
     top: 15px;
     left: 15px;
@@ -5037,6 +5037,9 @@ Documents
   .compare__table .product-preview__wishlist {
     width: 40px;
   }
+}
+.compare__table-row {
+  position: relative;
 }
 .compare__scroll-right {
   position: fixed;
