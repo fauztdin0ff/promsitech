@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
          });
 
-         let lastMouseX = null;
+         /* let lastMouseX = null;
 
          slider.addEventListener('mousemove', function (event) {
             if (window.innerWidth <= 1024) return;
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
          slider.addEventListener('mouseleave', function () {
             lastMouseX = null;
-         });
+         }); */
       });
    }
 });
@@ -637,5 +637,58 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 });
 
+
+/*------------------------------Scroll---------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   const wrapper = document.querySelector('.compare__wrapper');
+   const scrollBtn = document.querySelector('.compare__scroll-right');
+   if (!wrapper || !scrollBtn) return;
+
+   let isDown = false;
+   let startX;
+   let scrollLeft;
+
+   wrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      wrapper.classList.add('dragging');
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+   });
+
+   wrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+      wrapper.classList.remove('dragging');
+   });
+
+   wrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      wrapper.classList.remove('dragging');
+   });
+
+   wrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      wrapper.scrollLeft = scrollLeft - walk;
+   });
+
+   // Скролл по кнопке
+   scrollBtn.addEventListener('click', () => {
+      wrapper.scrollBy({
+         left: 360,
+         behavior: 'smooth',
+      });
+   });
+
+   const checkScrollEnd = () => {
+      const scrollRight = wrapper.scrollWidth - wrapper.clientWidth - wrapper.scrollLeft;
+      scrollBtn.classList.toggle('hidden', scrollRight < 5);
+   };
+
+   wrapper.addEventListener('scroll', checkScrollEnd);
+   window.addEventListener('resize', checkScrollEnd);
+   checkScrollEnd();
+});
 /******/ })()
 ;
